@@ -1,0 +1,165 @@
+  ************************************************************** 
+
+  Stochastic Gw, v1.3 (Mar/2017) 
+
+  ************************************************************** 
+
+  Program uses:           30  cores 
+  icounter =               0
+  scratch_path=.                                                                                                   
+  scratch_dir=./GW_SCRATCH.0                                                                                      
+  Details on the Results are in : GW_WORK.0/details_ouput.txt
+
+  Positions in bohr, read from: cnt.ini 
+  Number of atoms :              2
+  Number of elements:            1
+
+  Reading pseudopotential file: H.pw-mt_fhi.UPF
+  Finished reading PP 
+
+  WARNING: potential problem in pseduopotential: <phi_L|phi_L> isnt 1.
+  Specifcially: for atom-charge            1  and L            1  <phi_L|phi_L>    1.05450773    
+
+  Finished checking PP 
+  
+  Total charge:    2.00000000    
+
+  NOTE: deterministic tddft, # states modifed from           -1  to:            1
+
+  ############# ECHO OF INPUT VARIABLES #############
+  MC (total)            =         120
+  # MC_STEP (each core) =           4
+  multiplicity (=nsp)   =           1
+  work_dir:       = GW_WORK.0
+  scratch_dir     = ./GW_SCRATCH.0
+  centers units   = Bohr
+  flgdyn          = F  i.e., W-RPA   
+  det_tddft       = T
+  binary inp.     = F
+  periodic        = F
+  scale_vh        =           1
+  N_cores (mpi)   =          30
+  buffer_size     =           1
+  ntddft*nsp      =           1
+  orb_indx        =           1
+  PP:nrppmx       =        1200
+  xc_type         =           2  i.e.,  LDA (PW91)                             
+  ekcut           =    15.00000
+  dt              =     0.05000
+  gamma           =     0.06000
+  sm              =     0.00010
+  charge_net      =     0.00000
+  nxi             =     10000
+  segment_fraction=     0.00300
+
+  ############ DETERMINED VARIABLES ############ 
+  tmax         =   50.0000000    
+  nw           =        8192
+  dw           =   1.53398076E-02
+
+  ############## Grid parameters as read  from wf.txt   ############ 
+  nx                     30
+  ny                     30
+  nz                     30
+  n                   27000
+  dx               0.500000
+  dy               0.500000
+  dz               0.500000
+  dv               0.125000
+
+  eorb = eigenvalue( state            1 ) =  -0.378631353    
+
+  ############ NOW READING RANDOM SEED (KISS ALGORITHM) ############ 
+
+   Using 2 files: 
+   (I)  counter.inp, with 1 small integer (run counter) modifying seeds 
+          run counter =           0
+
+   (II) random.inp,  with             6  lines 
+          format: line_s,  seed(1:4)          
+           1  4918766489148718939   233323670646789587     9977980373882017   486467501831053063
+           2  6244084570646058670   545213886005985948     7131685237237852   987083719353786875
+           3  7177744451496536000   248584756112959748     5452085552784765   449662790991829945
+           4  2382737462647584383   147365492678483335     3215422831574858   682272223458568484
+           5  5746564312394933994   332747674464367229     3238576886587448   532828222678585833
+           6  6448337424549428332   426672252228765853     8557673733747473   433485483833222285
+  
+
+  NOTE: memory requirements per core due to psi -- in GB    8.00800025E-02
+
+
+  segment width           82
+
+  <phi|H|phi> from orbital in orb.txt is:  -0.378696352    
+                        vs. eorb as read:  -0.378631353    
+
+  Time:  preparation    1.55609798    
+
+ ######## Accumulative # of Monte Carlo steps :  MC=         30 ######## 
+ Completed Monte Carlo steps in each core : MC_STEP=          1
+
+
+                    -0.378696                          E                          
+                    -0.424763                          <V>                        
+            30      -0.646902       0.000000           MC, <X>         +-stat.err 
+            30       0.010065       0.018112           MC, Sig_R(e_qp) +-stat.err 
+            30      -0.026798       0.012588           MC, Sig_R(e_ks) +-stat.err 
+            30      -0.000039       0.000009           MC, Sig_I(e_ks) +-stat.err 
+            30       0.899707                          MC, Z                      
+            30      -0.602666                          MC, Elin                   
+            30      -0.590769       0.018112           MC, E_qp        +-stat.err 
+            30       0.004379       0.000966           MC, Ei_qp       +-stat.err 
+
+  Time:  MC_STEP:            1 => time:    61.9238701    
+
+ ######## Accumulative # of Monte Carlo steps :  MC=         60 ######## 
+ Completed Monte Carlo steps in each core : MC_STEP=          2
+
+
+                    -0.378696                          E                          
+                    -0.424763                          <V>                        
+            60      -0.646902       0.000000           MC, <X>         +-stat.err 
+            60       0.024088       0.020848           MC, Sig_R(e_qp) +-stat.err 
+            60      -0.013939       0.013857           MC, Sig_R(e_ks) +-stat.err 
+            60      -0.000051       0.000017           MC, Sig_I(e_ks) +-stat.err 
+            60       0.889239                          MC, Z                      
+            60      -0.588625                          MC, Elin                   
+            60      -0.576747       0.020848           MC, E_qp        +-stat.err 
+            60       0.003549       0.000808           MC, Ei_qp       +-stat.err 
+
+  Time:  MC_STEP:            2 => time:    136.968567    
+
+ ######## Accumulative # of Monte Carlo steps :  MC=         90 ######## 
+ Completed Monte Carlo steps in each core : MC_STEP=          3
+
+
+                    -0.378696                          E                          
+                    -0.424763                          <V>                        
+            90      -0.646902       0.000000           MC, <X>         +-stat.err 
+            90       0.022761       0.015719           MC, Sig_R(e_qp) +-stat.err 
+            90      -0.015577       0.010458           MC, Sig_R(e_ks) +-stat.err 
+            90      -0.000048       0.000012           MC, Sig_I(e_ks) +-stat.err 
+            90       0.888924                          MC, Z                      
+            90      -0.590007                          MC, Elin                   
+            90      -0.578074       0.015719           MC, E_qp        +-stat.err 
+            90       0.003620       0.000623           MC, Ei_qp       +-stat.err 
+
+  Time:  MC_STEP:            3 => time:    225.066071    
+
+ ######## Accumulative # of Monte Carlo steps :  MC=        120 ######## 
+ Completed Monte Carlo steps in each core : MC_STEP=          4
+
+
+                    -0.378696                          E                          
+                    -0.424763                          <V>                        
+           120      -0.646902       0.000000           MC, <X>         +-stat.err 
+           120       0.018595       0.012778           MC, Sig_R(e_qp) +-stat.err 
+           120      -0.018666       0.008620           MC, Sig_R(e_ks) +-stat.err 
+           120      -0.000045       0.000009           MC, Sig_I(e_ks) +-stat.err 
+           120       0.894364                          MC, Z                      
+           120      -0.594063                          MC, Elin                   
+           120      -0.582239       0.012778           MC, E_qp        +-stat.err 
+           120       0.003750       0.000543           MC, Ei_qp       +-stat.err 
+
+  Time:  MC_STEP:            4 => time:    306.175140    
+  Time:  program end    306.199127    
