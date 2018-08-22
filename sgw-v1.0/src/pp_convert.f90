@@ -415,8 +415,8 @@ end subroutine elname
 
 subroutine str2int(str,n,num)
   implicit none
-  character(n)     :: str
   integer          :: num,n
+  character(n)     :: str
   read(str,*) num
 end subroutine str2int
 

@@ -35,7 +35,7 @@ subroutine prep_vk( nx,ny,nz,dx,dy,dz,vk,periodic)
   complex*16, parameter :: ci = (0.d0, 1.d0)
   pi = dacos(-1.d0)
 
-  allocate(cvk(nx,ny,nz),stat=st); if(st/=0)stop' cvk '  
+  allocate(cvk(nx,ny,nz),stat=st); if(st/=0)stop ' cvk '  
   aa = 7d0/min(nx*dx,ny*dy,nz*dz)
   r0 = (/ -(nx)/2d0*dx, -(ny)/2d0*dy, -(nz)/2d0*dz /)
 

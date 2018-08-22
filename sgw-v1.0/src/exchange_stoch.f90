@@ -18,7 +18,7 @@ subroutine exchange_stoch
   integer ie, is, st
   complex*16  c1
   complex*16, allocatable :: crho(:), cpot(:)
-  allocate(crho(n),cpot(n),stat=st); if(st/=0) stop' crho problems'
+  allocate(crho(n),cpot(n),stat=st); if(st/=0) stop ' crho problems'
 
   exce = 0d0
   ieloop : do ie=1,ne
